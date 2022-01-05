@@ -21,8 +21,66 @@
     </header>    
     <button id="logout">Logout</button>
     <main>
-        <h1>You are logged in!</h1>
-    </main>
+        <section>
+            <h2>Welcome to beautiful <span class="city-name"></span></h2>
+        </section>
+        <section class="pictures">
+            <div class="water">
+                <img class="water-img" />
+            </div>
+            <div class="skyline">
+                <img class="skyline-img" />
+            </div>
+            <div class="castle">
+                <img class="castle-img" />
+            </div>
+        </section>
+        <section class="slogan-section">
+            <h3>Slogans:</h3>
+            <div class="slogan-list">
+
+            </div>
+        </section>
+        <section class="inputs">
+            <form class="slogan-form">
+                <input name="slogan" />
+                <button>Add slogan</button>
+            </form>
+            <form class="name-form">
+                <input name="name" />
+                <button>Change name</button>
+            </form>
+            <div class="dropdowns">
+                <label>
+                    Waterfront
+                    <select class="waterfront-dropdown">
+                        <option value="canal">1</option>
+                        <option value="frozen">2</option>
+                        <option value="paradise">3</option>
+                    </select>
+                </label>
+                <label>
+                    Skyline
+                    <select class="skyline-dropdown">
+                        <option value="dubai">1</option>
+                        <option value="hong-kong">2</option>
+                        <option value="portland">3</option>
+                    </select>
+                </label>
+                <label>
+                    Castle Dropdown
+                    <select class="castle-dropdown">
+                        <option value="budapest">1</option>
+                        <option value="cochem">2</option>
+                        <option value="germany">3</option>
+                    </select>
+                </label>
+
+
+            </div>
+
+        </section>
+</main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>

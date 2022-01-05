@@ -1,7 +1,72 @@
-const SUPABASE_URL = '';
-const SUPABASE_KEY = '';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTUwODU3MCwiZXhwIjoxOTU1MDg0NTcwfQ.b9_dCGIQkWfhzS3QZihLzQkD3n-sAt3L9swaEU7JzqI';
+const SUPABASE_URL = 'https://rfwnchvtfqbachqhdfbi.supabase.co';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+export async function createCity(city) {
+    const response = await client
+        .from('cities')
+        .insert('city')
+        //.macth({ user_id: city.user_id })
+        .single();
+    return checkError(response);
+}
+
+export async function updateWaterfront(value) {
+    //const currentUserID = client.auth.user().id;
+
+    const response = await client 
+        .from('cities')
+        .update({ waterfront: value })
+        //.macth({ user_id: currentUserID })
+        .single();
+    return checkError(response);
+}
+
+export async function updateSkyline(value) {
+    //const currentUserID = client.auth.user().id;
+
+    const response = await client 
+        .from('cities')
+        .update({ skyline: value })
+        //.macth({ user_id: currentUserID })
+        .single();
+    return checkError(response);
+}
+
+export async function updateCastle(value) {
+    //const currentUserID = client.auth.user().id;
+
+    const response = await client 
+        .from('cities')
+        .update({ castle: value })
+        //.macth({ user_id: currentUserID })
+        .single();
+    return checkError(response);
+}
+
+export async function updateSlogans(value) {
+    //const currentUserID = client.auth.user().id;
+
+    const response = await client 
+        .from('cities')
+        .update({ slogans: value })
+        //.macth({ user_id: currentUserID })
+        .single();
+    return checkError(response);
+}
+
+export async function getCity() {
+    const response = await client
+        .from('cities')
+        .select()
+        //.match({ user_id: client.auth.user().id })
+        .single();
+
+    return checkError(response);
+}
+
+
 
 export async function getUser() {
     return client.auth.session();
