@@ -16,10 +16,11 @@ export async function createCity() {
             }
         ])
         //.match({ user_id: city.user_id })
+        
         .single();
     return checkError(response);
 }
-
+console.log(createCity);
 export async function updateWaterfront(value) {
     //const currentUserID = client.auth.user().id;
 
